@@ -67,7 +67,7 @@ h2 {
 /* Ensure navigation text is visible */
 .navbar {
   background-color: var(--nav-background-color);
-  color: var(--nav-text-color);
+  color: #ffffff !important; /* Ensure text is white */
 }
 
 .navbar a {
