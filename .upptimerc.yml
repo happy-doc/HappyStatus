@@ -12,7 +12,7 @@ sites:
   - name: OpenAI
     url: https://status.openai.com/api/v2/status.json
   - name: Database
-    url: https://supa.happdoc.ai/rest/v1/app_versions?id=eq.1
+    url: https://supa.happydoc.ai/rest/v1/app_versions?id=eq.1
     headers:
       - "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
       - "apiKey: ${{ secrets.SUPABASE_KEY }}"
