@@ -3,6 +3,8 @@ owner: happy-doc
 repo: HappyStatus
 
 sites:
+  - name: Web App
+    url: https://app.gohappydoc.com
   - name: Transcription
     url: https://service.gohappydoc.com/service-transcribe/healthcheck
   - name: Document Generation
@@ -19,6 +21,7 @@ sites:
 status-website:
   cname: status.gohappydoc.com
   logoUrl: https://status.gohappydoc.com/favicon.png
+  favicon: https://status.gohappydoc.com/favicon.ico
   themeUrl: https://status.gohappydoc.com/theme.css
   name: HappyStatus
   # introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
