@@ -14,8 +14,8 @@ sites:
   - name: Database
     url: https://supa.happydoc.ai/rest/v1/app_versions?id=eq.1
     headers:
-      - "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
-      - "apiKey: ${{ secrets.SUPABASE_KEY }}"
+      - "Authorization: Bearer $SUPABASE_KEY"
+      - "apiKey: $SUPABASE_KEY"
       - "Content-Type: application/json"
 
 status-website:
