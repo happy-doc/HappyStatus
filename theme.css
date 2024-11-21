@@ -1,0 +1,137 @@
+:root {
+  --body-background-color: #f9fafb; /* Light neutral background for better readability */
+  --body-text-color: #111827; /* Dark gray for body text */
+  --card-background-color: #ffffff; /* White cards for clean look */
+  --nav-background-color: #1f2937; /* Darker nav bar for contrast */
+  --nav-border-bottom-color: #374151; /* Subtle border for separation */
+  --nav-current-border-bottom-color: #3b82f6; /* Blue for active links */
+  --card-border-color: #e5e7eb; /* Light gray border for cards */
+  --down-border-left-color: #dc2626; /* Bright red for errors */
+  --down-background-color: #fee2e2; /* Light red for warnings */
+  --degraded-border-left-color: #facc15; /* Yellow for degraded services */
+  --up-border-left-color: #16a34a; /* Green for healthy status */
+  --tag-color: #1f2937; /* Neutral gray for tag text */
+  --tag-up-background-color: #d1fae5; /* Light green for success tags */
+  --tag-down-background-color: #fee2e2; /* Light red for error tags */
+  --tag-degraded-background-color: #fef9c3; /* Light yellow for degraded tags */
+  --change-background-color: #e2e8f0; /* Light gray for subtle changes */
+  --error-button-border-color: #ef4444; /* Bright red for error buttons */
+  --error-button-background-color: #dc2626; /* Red for error buttons */
+  --error-button-color: #ffffff; /* White text for buttons */
+  --submit-button-border-color: #3b82f6; /* Blue for submit buttons */
+  --submit-button-background-color: #2563eb; /* Slightly darker blue for hover */
+  --submit-button-color: #ffffff; /* White text */
+  --graph-opacity: 1;
+  --graph-filter: none;
+}
+
+/* Global Font Overrides */
+html,
+body {
+  font-family: "Inter", sans-serif;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+}
+
+h1,
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: var(--body-text-color);
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+/* Card Styling */
+.card {
+  background-color: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--nav-background-color);
+  border-bottom: 2px solid var(--nav-border-bottom-color);
+}
+
+.nav-item-active {
+  border-bottom: 3px solid var(--nav-current-border-bottom-color);
+}
+
+/* Status Indicators */
+.status-up {
+  color: var(--up-border-left-color);
+}
+
+.status-down {
+  color: var(--down-border-left-color);
+}
+
+.status-degraded {
+  color: var(--degraded-border-left-color);
+}
+
+/* Buttons */
+.primary-button {
+  background-color: var(--submit-button-background-color);
+  color: var(--submit-button-color);
+  border: 1px solid var(--submit-button-border-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.primary-button:hover {
+  background-color: #1d4ed8; /* Slightly darker blue on hover */
+}
+
+.error-button {
+  background-color: var(--error-button-background-color);
+  color: var(--error-button-color);
+  border: 1px solid var(--error-button-border-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.error-button:hover {
+  background-color: #b91c1c; /* Darker red on hover */
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.tag-up {
+  background-color: var(--tag-up-background-color);
+  color: var(--up-border-left-color);
+}
+
+.tag-down {
+  background-color: var(--tag-down-background-color);
+  color: var(--down-border-left-color);
+}
+
+.tag-degraded {
+  background-color: var(--tag-degraded-background-color);
+  color: var(--degraded-border-left-color);
+}
