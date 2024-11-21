@@ -21,7 +21,7 @@ sites:
 status-website:
   cname: status.gohappydoc.com
   logoUrl: https://status.gohappydoc.com/favicon.png
-  favicon: https://status.gohappydoc.com/favicon.ico
+  favicon: https://status.gohappydoc.com/favicon.png
   themeUrl: https://status.gohappydoc.com/theme.css
   name: HappyStatus
   # introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
