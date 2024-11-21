@@ -2,7 +2,9 @@
   --body-background-color: #f9fafb; /* Light neutral background for better readability */
   --body-text-color: #111827; /* Dark gray for body text */
   --card-background-color: #ffffff; /* White cards for clean look */
-  --nav-background-color: #1f2937; /* Darker nav bar for contrast */
+  --nav-background-color: #1f2937; /* Dark background */
+  --nav-text-color: #ffffff; /* White text for contrast */
+  --nav-link-hover-color: #3b82f6; /* Blue for hover state */
   --nav-border-bottom-color: #374151; /* Subtle border for separation */
   --nav-current-border-bottom-color: #3b82f6; /* Blue for active links */
   --card-border-color: #e5e7eb; /* Light gray border for cards */
@@ -62,13 +64,20 @@ h2 {
 }
 
 /* Navigation */
+/* Ensure navigation text is visible */
 .navbar {
   background-color: var(--nav-background-color);
-  border-bottom: 2px solid var(--nav-border-bottom-color);
+  color: var(--nav-text-color);
 }
 
-.nav-item-active {
-  border-bottom: 3px solid var(--nav-current-border-bottom-color);
+.navbar a {
+  color: var(--nav-text-color);
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--nav-link-hover-color);
+  text-decoration: underline;
 }
 
 /* Status Indicators */

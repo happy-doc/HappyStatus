@@ -9,6 +9,12 @@ sites:
     url: https://service.gohappydoc.com/api-server/healthcheck
   - name: OpenAI
     url: https://status.openai.com/api/v2/status.json
+  - name: Database
+    url: https://supa.happdoc.ai/rest/v1/app_versions?id=eq.1
+    headers:
+      - "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
+      - "apiKey: ${{ secrets.SUPABASE_KEY }}"
+      - "Content-Type: application/json"
 
 status-website:
   cname: status.gohappydoc.com
