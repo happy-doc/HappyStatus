@@ -70,6 +70,10 @@ h2 {
   color: #ffffff !important; /* Ensure text is white */
 }
 
+.navbar div {
+  color: var(--nav-text-color);
+}
+
 .navbar a {
   color: var(--nav-text-color);
   text-decoration: none;
