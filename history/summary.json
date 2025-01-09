@@ -40,18 +40,20 @@
     "url": "https://service.gohappydoc.com/api-server/healthcheck",
     "icon": "https://icons.duckduckgo.com/ip3/service.gohappydoc.com.ico",
     "slug": "document-generation",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 54,
-    "timeDay": 71,
-    "timeWeek": 57,
+    "timeDay": 61,
+    "timeWeek": 56,
     "timeMonth": 55,
     "timeYear": 54,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2025-01-09": 0
+    }
   },
   {
     "name": "OpenAI",
