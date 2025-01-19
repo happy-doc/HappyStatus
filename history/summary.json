@@ -40,7 +40,7 @@
     "url": "https://service.gohappydoc.com/api-server/healthcheck",
     "icon": "https://icons.duckduckgo.com/ip3/service.gohappydoc.com.ico",
     "slug": "document-generation",
-    "status": "up",
+    "status": "down",
     "uptime": "99.83%",
     "uptimeDay": "93.18%",
     "uptimeWeek": "99.03%",
