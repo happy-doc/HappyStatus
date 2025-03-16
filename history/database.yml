@@ -1,7 +1,7 @@
 url: https://supa.happydoc.ai/rest/v1/app_versions?id=eq.1
 status: up
 code: 200
-responseTime: 500
-lastUpdated: 2025-03-15T23:04:34.932Z
+responseTime: 225
+lastUpdated: 2025-03-16T23:04:33.578Z
 startTime: 2024-11-21T00:50:38.416Z
 generator: Upptime <https://github.com/upptime/upptime>
