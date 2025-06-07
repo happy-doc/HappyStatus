@@ -1,7 +1,7 @@
 url: https://service.gohappydoc.com/api-server/healthcheck
-status: down
-code: 503
-responseTime: 23
-lastUpdated: 2025-06-07T13:31:31.787Z
+status: up
+code: 200
+responseTime: 6372
+lastUpdated: 2025-06-07T13:51:05.240Z
 startTime: 2024-11-20T23:38:48.222Z
 generator: Upptime <https://github.com/upptime/upptime>
