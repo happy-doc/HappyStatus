@@ -93,17 +93,19 @@
     "url": "https://supa.happydoc.ai/rest/v1/app_versions?id=eq.1",
     "icon": "https://icons.duckduckgo.com/ip3/supa.happydoc.ai.ico",
     "slug": "database",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 402,
-    "timeDay": 356,
-    "timeWeek": 430,
-    "timeMonth": 389,
-    "timeYear": 402,
-    "dailyMinutesDown": {}
+    "time": 440,
+    "timeDay": 4338,
+    "timeWeek": 1416,
+    "timeMonth": 637,
+    "timeYear": 440,
+    "dailyMinutesDown": {
+      "2025-06-12": 0
+    }
   }
 ]
