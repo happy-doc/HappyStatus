@@ -1,7 +1,7 @@
 url: https://status.openai.com/api/v2/status.json
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2025-08-28T14:03:24.349Z
+status: up
+code: 200
+responseTime: 148
+lastUpdated: 2025-08-28T14:14:58.032Z
 startTime: 2024-11-20T23:38:48.623Z
 generator: Upptime <https://github.com/upptime/upptime>
