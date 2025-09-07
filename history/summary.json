@@ -4,7 +4,7 @@
     "url": "https://app.gohappydoc.com",
     "icon": "https://icons.duckduckgo.com/ip3/app.gohappydoc.com.ico",
     "slug": "web-app",
-    "status": "up",
+    "status": "down",
     "uptime": "99.88%",
     "uptimeDay": "99.41%",
     "uptimeWeek": "98.64%",
@@ -16,6 +16,7 @@
     "timeMonth": 152,
     "timeYear": 136,
     "dailyMinutesDown": {
+      "2025-09-07": 0,
       "2025-09-06": 8,
       "2025-09-03": 19,
       "2025-09-02": 65,
@@ -38,18 +39,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/service.gohappydoc.com.ico",
     "slug": "transcription",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "99.99%",
+    "uptimeDay": "98.08%",
+    "uptimeWeek": "99.73%",
+    "uptimeMonth": "99.94%",
+    "uptimeYear": "99.99%",
     "time": 235,
     "timeDay": 254,
     "timeWeek": 273,
     "timeMonth": 235,
     "timeYear": 235,
     "dailyMinutesDown": {
-      "2025-09-07": 0
+      "2025-09-07": 28
     }
   },
   {
@@ -84,9 +85,9 @@
     "url": "https://status.openai.com/api/v2/status.json",
     "icon": "https://icons.duckduckgo.com/ip3/status.openai.com.ico",
     "slug": "open-ai",
-    "status": "up",
+    "status": "down",
     "uptime": "99.84%",
-    "uptimeDay": "99.41%",
+    "uptimeDay": "99.39%",
     "uptimeWeek": "98.67%",
     "uptimeMonth": "98.94%",
     "uptimeYear": "99.84%",
@@ -96,6 +97,7 @@
     "timeMonth": 548,
     "timeYear": 257,
     "dailyMinutesDown": {
+      "2025-09-07": 0,
       "2025-09-06": 9,
       "2025-09-03": 19,
       "2025-09-02": 64,
