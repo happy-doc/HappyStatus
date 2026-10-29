@@ -37,6 +37,8 @@ With [Upptime](https://upptime.js.org), you can get your own unlimited and free 
 
 `heartbeat.yml` on the `heartbeat` branch (force-pushed as a single orphan commit by the Heartbeat workflow after each successful Uptime CI run) is the freshness signal for app.gohappydoc.com/check-setup, with a 30-minute staleness window.
 
+Workflows run on the built-in `GITHUB_TOKEN` (no `GH_PAT`). The org forces read-only default tokens, so each workflow declares its own `permissions:` block. Setup CI and Update Template CI stay disabled (keepalive skips them): they regenerate workflow files, which `GITHUB_TOKEN` cannot push and which would drop those blocks. Re-add the blocks by hand after any manual template upgrade.
+
 ## 📄 License
 
 - Powered by: [Upptime](https://github.com/upptime/upptime)

@@ -18,6 +18,8 @@ jobs:
         run: |
           failed=0
           for f in .github/workflows/*.yml; do
+            # setup.yml and update-template.yml stay disabled: they regenerate workflow files and would drop the permissions blocks (EN-1502).
+            case "$(basename "$f")" in setup.yml|update-template.yml) continue ;; esac
             if ! out="$(gh workflow enable "$(basename "$f")" 2>&1)"; then
               if echo "$out" | grep -Eqi 'already enabled|is not disabled'; then
                 continue
