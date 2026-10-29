@@ -18,6 +18,9 @@ sites:
       - "apiKey: $SUPABASE_KEY"
       - "Content-Type: application/json"
 
+  - name: Storage
+    url: https://supa.happydoc.ai/storage/v1/version
+
 status-website:
   cname: status.gohappydoc.com
   logoUrl: https://status.gohappydoc.com/favicon.png
