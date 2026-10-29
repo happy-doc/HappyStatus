@@ -17,6 +17,8 @@ sites:
       - "Authorization: Bearer $SUPABASE_KEY"
       - "apiKey: $SUPABASE_KEY"
       - "Content-Type: application/json"
+  - name: Storage
+    url: https://supa.happydoc.ai/storage/v1/version
 
 status-website:
   cname: status.gohappydoc.com

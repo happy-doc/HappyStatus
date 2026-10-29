@@ -1,0 +1,31 @@
+name: Keepalive
+on:
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+permissions:
+  actions: write
+  contents: read
+jobs:
+  keepalive:
+    name: Prevent scheduled workflow disablement
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Re-enable all workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          failed=0
+          for f in .github/workflows/*.yml; do
+            # setup.yml and update-template.yml stay disabled: they regenerate workflow files and would drop the permissions blocks (EN-1502).
+            case "$(basename "$f")" in setup.yml|update-template.yml) continue ;; esac
+            if ! out="$(gh workflow enable "$(basename "$f")" 2>&1)"; then
+              if echo "$out" | grep -Eqi 'already enabled|is not disabled'; then
+                continue
+              fi
+              echo "::error::enable failed for $f: $out"
+              failed=1
+            fi
+          done
+          exit "$failed"

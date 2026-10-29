@@ -1,0 +1,28 @@
+name: Heartbeat
+on:
+  workflow_run:
+    workflows: ["Uptime CI"]
+    types: [completed]
+permissions:
+  contents: write
+jobs:
+  heartbeat:
+    name: Write freshness heartbeat
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      # Single orphan commit force-pushed to a dedicated branch: never touches master
+      # (Upptime's daily template update deletes unknown history files and races pushes).
+      - name: Publish heartbeat branch
+        env:
+          TOKEN: ${{ secrets.GH_PAT || github.token }}
+        run: |
+          dir="$(mktemp -d)"
+          cd "$dir"
+          git init -q
+          echo "lastUpdated: $(date -u +%Y-%m-%dT%H:%M:%SZ)" > heartbeat.yml
+          git config user.name "Upptime Bot"
+          git config user.email "73812536+upptime-bot@users.noreply.github.com"
+          git add heartbeat.yml
+          git commit -q -m ":heartbeat: Heartbeat [skip ci] [upptime]"
+          git push --force "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git" HEAD:refs/heads/heartbeat
