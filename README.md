@@ -35,7 +35,7 @@ With [Upptime](https://upptime.js.org), you can get your own unlimited and free 
 - Database (`/rest/v1/app_versions?id=eq.1`): PostgREST and Postgres answer an authenticated query (uses `SUPABASE_KEY`).
 - Storage (`/storage/v1/version`): Storage API is up; this endpoint returns 200 without a key.
 
-`history/heartbeat.yml` (written by `heartbeat.yml` after each successful Uptime CI run) is the freshness signal for app.gohappydoc.com/check-setup, with a 30-minute staleness window.
+`heartbeat.yml` on the `heartbeat` branch (force-pushed as a single orphan commit by the Heartbeat workflow after each successful Uptime CI run) is the freshness signal for app.gohappydoc.com/check-setup, with a 30-minute staleness window.
 
 ## 📄 License
 

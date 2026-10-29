@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   actions: write
+  contents: read
 jobs:
   keepalive:
     name: Prevent scheduled workflow disablement
@@ -15,6 +16,14 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          for f in $(ls .github/workflows/*.yml); do
-            gh workflow enable "$(basename "$f")" || true
+          failed=0
+          for f in .github/workflows/*.yml; do
+            if ! out="$(gh workflow enable "$(basename "$f")" 2>&1)"; then
+              if echo "$out" | grep -Eqi 'already enabled|is not disabled'; then
+                continue
+              fi
+              echo "::error::enable failed for $f: $out"
+              failed=1
+            fi
           done
+          exit "$failed"
