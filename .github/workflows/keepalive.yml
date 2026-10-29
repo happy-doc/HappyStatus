@@ -4,7 +4,6 @@ on:
     - cron: "0 3 * * 1"
   workflow_dispatch:
 permissions:
-  contents: write
   actions: write
 jobs:
   keepalive:
@@ -12,4 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: gautamkrishnar/keepalive-workflow@v2
+      - name: Re-enable all workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for f in $(ls .github/workflows/*.yml); do
+            gh workflow enable "$(basename "$f")" || true
+          done
