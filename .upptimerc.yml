@@ -8,7 +8,7 @@ sites:
   - name: Transcription
     url: https://service.gohappydoc.com/service-transcribe/healthcheck
   - name: Document Generation
-    url: https://service.gohappydoc.com/api-server/healthcheck
+    url: https://service.gohappydoc.com/api-server/healthcheck/deep
   - name: OpenAI
     url: https://status.openai.com/api/v2/status.json
   - name: Database
