@@ -31,7 +31,7 @@ With [Upptime](https://upptime.js.org), you can get your own unlimited and free 
 
 - Web App (`app.gohappydoc.com`): frontend is served.
 - Transcription (`/service-transcribe/healthcheck`): transcription service is up.
-- Document Generation (`/api-server/healthcheck`): API-Server is up. Will switch to `/api-server/healthcheck/deep` after API-Server deploys it.
+- Document Generation (`/api-server/healthcheck/deep`): API-Server is up and can query the database within 3 s (plain `/healthcheck` always returns 200).
 - OpenAI (status.openai.com): upstream LLM provider status.
 - Database (`/rest/v1/app_versions?id=eq.1`): PostgREST and Postgres answer an authenticated query (uses `SUPABASE_KEY`).
 - Storage (`/storage/v1/version`): Storage API is up; this endpoint returns 200 without a key.
