@@ -21,8 +21,9 @@ on:
   repository_dispatch:
     types: [static_site]
   workflow_dispatch:
+# Own group, not the shared -upptime one: daily schedules stopped firing while in it (EN-1502).
 concurrency:
-  group: ${{ github.repository }}-${{ github.head_ref || github.ref_name }}-upptime
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: false
 permissions:
   contents: write
